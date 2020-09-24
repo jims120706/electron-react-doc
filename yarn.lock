@@ -2633,6 +2633,11 @@ boolean@^3.0.1:
   resolved "https://registry.npm.taobao.org/boolean/download/boolean-3.0.1.tgz#35ecf2b4a2ee191b0b44986f14eb5f052a5cbb4f"
   integrity sha1-NezytKLuGRsLRJhvFOtfBSpcu08=
 
+bootstrap@^4.5.2:
+  version "4.5.2"
+  resolved "https://registry.npm.taobao.org/bootstrap/download/bootstrap-4.5.2.tgz#a85c4eda59155f0d71186b6e6ad9b875813779ab"
+  integrity sha1-qFxO2lkVXw1xGGtuatm4dYE3eas=
+
 brace-expansion@^1.1.7:
   version "1.1.11"
   resolved "https://registry.npm.taobao.org/brace-expansion/download/brace-expansion-1.1.11.tgz#3c7fcbf529d87226f3d2f52b966ff5271eb441dd"
