@@ -20,9 +20,9 @@ const FileSearch = ({ title, onFileSearch }) => {
 	let node = useRef(null)
 
 	useEffect(() => {
-		if(enterPressed && inputActive) {
+		if (enterPressed && inputActive) {
 			onFileSearch(value)
-		}else if(escPressed && inputActive) {
+		} else if (escPressed && inputActive) {
 			closeSearch()
 		}
 	})
@@ -32,7 +32,7 @@ const FileSearch = ({ title, onFileSearch }) => {
 		}
 	}, [inputActive])
 	return (
-		<div className="alert alert-primary">
+		<div className="alert alert-primary mb-0">
 			{!inputActive && <div className="d-flex justify-content-between align-items-center">
 				<span>{title}</span>
 				<button type="button" className="icon-button" onClick={() => { setInputActive(true) }}>
