@@ -12,7 +12,12 @@ function App() {
       <div className="row">
         <div className="col left-panel">
           <FileSearch title="我的源文档" onFileSearch={(value) => { console.log(value) }} />
-          <FileList files={defaultFiles} />
+          <FileList
+            files={defaultFiles}
+            onFileClick={(id) => console.log(id)}
+            onSaveEdit={(id) => console.log(id)}
+            onFileDelate={(id) => console.log(id)}
+          />
         </div>
         <div className="col bg-primary right-panel">
           <h1>right</h1>
