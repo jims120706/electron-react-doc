@@ -10,9 +10,13 @@ const TabList = ({ files, activeId, unsaveIds, onTabClick, onTabClose }) => {
     <ul className="nav nav-pills tablist-component">
       {
         files.map(file => {
+          // 编辑过的圆点
+          const withUnsavedMark = unsaveIds.includes(file.id)
+          // 拼接class的
           const fClassName = classNames({
             'nav-link': true,
-            'active': file.id === activeId
+            'active': file.id === activeId,
+            "withUnsaved": withUnsavedMark,
           })
           return (
             <li className="nav-item" key={file.id}>
@@ -25,6 +29,14 @@ const TabList = ({ files, activeId, unsaveIds, onTabClick, onTabClose }) => {
                 <span className="ml-2 close-icon" onClick={e => { e.stopPropagation(); onTabClose(file.id) }}>
                   <FontAwesomeIcon icon={faTimes} />
                 </span>
+                {
+                  withUnsavedMark && 
+                  <>
+                    <span className="rounded-circle ml-2 unsaved-icon">
+
+                    </span>
+                  </>
+                }
               </a>
             </li>
           )
