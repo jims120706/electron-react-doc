@@ -3,10 +3,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import PropTypes from 'prop-types' // 校验器
 import classNames from 'classnames'; // 类名拼接库
+import './TabList.scss'
 
 const TabList = ({ files, activeId, unsaveIds, onTabClick, onTabClose }) => {
   return (
-    <ul className="nav nav-pills">
+    <ul className="nav nav-pills tablist-component">
       {
         files.map(file => {
           const fClassName = classNames({
@@ -21,8 +22,8 @@ const TabList = ({ files, activeId, unsaveIds, onTabClick, onTabClose }) => {
                 onClick={(e) => { e.preventDefault(); onTabClick(file.id) }}
               >
                 {file.title}
-                <span className="ml-2">
-                  <FontAwesomeIcon icon={faTimes}/>
+                <span className="ml-2 close-icon" onClick={e => { e.stopPropagation(); onTabClose(file.id) }}>
+                  <FontAwesomeIcon icon={faTimes} />
                 </span>
               </a>
             </li>

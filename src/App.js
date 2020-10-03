@@ -34,6 +34,7 @@ function App() {
           <TabList
             files={defaultFiles}
             onTabClick={(id) => console.log("onTabClick", id)}
+            onTabClose={(id) => console.log("onTabClose", id)}
             activeId="1"
           ></TabList>
         </div>
